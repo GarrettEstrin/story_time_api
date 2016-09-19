@@ -1,2 +1,14 @@
-<h1>Stories#index</h1>
-<p>Find me in app/views/stories/index.html.erb</p>
+<h1>Community Story Time</h1>
+<hr>
+<%= link_to "Start a story", new_story_path %>
+<br>
+<%= link_to "Sign Up", new_user_path %>
+<hr>
+<h2>Recent Stories</h2>
+
+<% @stories.each do |s| %>
+<h3> <%= s.title %> </h3>
+<br>
+<h4> <%= s.content %> </h4>
+<hr>
+<% end %>
