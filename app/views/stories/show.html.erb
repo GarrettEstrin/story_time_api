@@ -1,2 +1,8 @@
 <h1><%= @story.title %></h1>
-<h2><%= @story.content %></h2>
+
+
+<% @split_story.each do |para| %>
+  <p>
+    <%= para %>
+  </p>
+<% end %>

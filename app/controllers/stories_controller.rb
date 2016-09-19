@@ -5,6 +5,7 @@ class StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
+    @split_story = @story[:content].split(/[\r\n]+/)
   end
 
   def new
