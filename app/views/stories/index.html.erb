@@ -18,8 +18,6 @@ or <%= link_to "Sign Up", new_user_path %>
 <h2>Recent Stories</h2>
 
 <% @stories.each do |s| %>
-<h3> <%= s.title %> </h3>
-<br>
-<h4> <%= s.content %> </h4>
+<h3><%= link_to s.title, story_path(s.id) %></h3>
 <hr>
 <% end %>
