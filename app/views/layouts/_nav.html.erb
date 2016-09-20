@@ -1,19 +1,24 @@
-<h1> <%= link_to "Community Story Time", stories_path %> </h1>
-<hr>
-<div class="col-md-12">
-  <!-- logged in/out links -->
-  <% if logged_in? %>
-  <%= link_to "Start a story", new_story_path %>
-  <br>
-  <%= link_to 'Log Out', logout_path %> |
-  Hello <%= current_user.name %>
-  <% else %>
+<% if not logged_in? %>
+<div class="col-md-7">
+  <h1> <%= link_to "Community Story Time", stories_path %> </h1>
+</div>
+<div class="col-md-5 nav_form">
   <%= form_tag sessions_path do %>
   Email: <%= text_field_tag :email %>
   Password: <%= password_field_tag :password, nil %>
   <%= submit_tag "Log In" %>
   <% end %>
-  or <%= link_to "Sign Up", new_user_path %>
-  <br>
-  <% end %>
-  <hr>
+</div>
+<% else %>
+<div class="col-md-5">
+<h1> <%= link_to "Community Story Time", stories_path %> </h1>
+</div>
+<div class="col-md-5 nav_start">
+  <button type="button" class="btn btn-default navbar-btn"><%= link_to "Start a story", new_story_path %></button>
+</div>
+<div class="col-md-2 nav_form">
+  Hello <%= current_user.name %> |
+  <%= link_to 'Log Out', logout_path %>
+</div>
+
+<% end %>

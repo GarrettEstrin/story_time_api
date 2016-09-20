@@ -25,7 +25,6 @@ class StoriesController < ApplicationController
 
   def update
     @story = Story.find(params[:id])
-    # @story.update(content: "#{params[:story][:content]}")
     @story.content += params[:story][:content]
     @story.save
     redirect_to story_path

@@ -7,6 +7,6 @@
 
 <% @stories.each do |s| %>
 <h3><%= link_to s.title, story_path(s.id) %></h3>
-<h4><%= link_to s.content.split(/[\r\n]+/)[0], story_path(s.id) %></h4>
+<h4><%= s.content.split(/[\r\n]+/)[0] %></h4>
 <hr>
 <% end %>
