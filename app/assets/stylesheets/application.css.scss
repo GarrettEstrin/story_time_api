@@ -19,9 +19,16 @@
 
  /* Custom CSS by Garrett Estrin | Garrett.Estrin.com */
 
- .form-size {
+ .form-size-large {
     font-size: 18px;
     padding: 5px;
     width: 600px;
     height: 600px;
+ }
+
+ .form-size-medium {
+    font-size: 18px;
+    padding: 5px;
+    width: 600px;
+    height: 200px;
  }

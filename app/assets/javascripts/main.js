@@ -18,3 +18,10 @@ $('textarea').keypress(function(event) {
       $(this).val("\n");
    }
 });​
+// var $text = $('#story_content');
+//
+// var clearContent = function(){
+//   $text.innerHTML = "";
+// }
+//
+// clearContent()
