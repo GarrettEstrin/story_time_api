@@ -6,3 +6,13 @@
     <%= para %>
   </p>
 <% end %>
+<hr>
+<% if logged_in? %>
+  <h3>Add to the story!</h3>
+  <br>
+  <%= form_for @story do |f| %>
+  <%= f.text_area :content, :class => 'form-size' %>
+  <br>
+  <%= f.submit %>
+  <% end %>
+<% end %>
