@@ -11,7 +11,7 @@
     <h3>Add to the story!</h3>
     <br>
     <%= form_for @story do |f| %>
-    <%= f.text_area :content, :class => 'form-size-medium', placeholder: "Add to the Story!" %>
+    <%= f.text_area :content, :class => 'form-size-medium', value: "", placeholder: "Add to the Story!" %>
     <br>
     <%= f.submit %>
   <% end %>
