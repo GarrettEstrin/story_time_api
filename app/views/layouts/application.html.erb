@@ -16,6 +16,12 @@
 
   </div>
 </div>
+<% if logged_in? %>
+<% if current_user.name == 'admin' %>
 <%= params %>
+<br>
+Current User: <%= current_user.id %>
+<% end %>
+<% end %>
 </body>
 </html>

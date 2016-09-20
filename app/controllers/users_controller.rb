@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.email = @user.email.downcase!
+    @user.email = @user.email
     if @user.save
       redirect_to stories_path
     else
