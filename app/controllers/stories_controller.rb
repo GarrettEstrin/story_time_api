@@ -6,7 +6,7 @@ class StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
-    @split_story = @story[:content].split(/[\r\n]+/)
+    @split_story = @story[:content].split('/[\r\n]+/')
     @user = User.all
   end
 
@@ -27,7 +27,7 @@ class StoriesController < ApplicationController
 
   def update
     @story = Story.find(params[:id])
-    @story.content += params[:story][:content]
+    @story.content += " " + "\\r\\n" + ' ' + params[:story][:content]
     @story.save
     redirect_to story_path
   end
