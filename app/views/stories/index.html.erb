@@ -14,20 +14,23 @@
 
 <kbd class="big-text">popular stories</kbd>
 
-<% @stories.each do |s| %>
-<h3><%= link_to s.title, story_path(s.id) %></h3>
-<h4><%= s.content.split(/[\r\n]+/)[0] %></h4>
+<% 5.times do |i| %>
+<h3><%= link_to @stories[i].title, story_path(@stories[i].id) %></h3>
+<h4><%= @stories[i].content.split(/[\r\n]+/)[0] %></h4>
 <hr>
 <% end %>
 </div>
+<!-- Start Testing section -->
+
+<!-- End testing section -->
 
 <div class="col-md-6">
 
 <kbd class="big-text">new stories</kbd>
 
-<% @reversed_h.each do |s| %>
-<h3><%= link_to s.title, story_path(s.id) %></h3>
-<h4><%= s.content.split(/[\r\n]+/)[0] %></h4>
+<% 5.times do |i| %>
+<h3><%= link_to @reversed_h[i].title, story_path(@reversed_h[i].id) %></h3>
+<h4><%= @reversed_h[i].content.split(/[\r\n]+/)[0] %></h4>
 <hr>
 <% end %>
 </div>
