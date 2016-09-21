@@ -94,7 +94,15 @@ h1 a {
   border-right: solid lightgrey 2px;
 }
 
+.text-white a {
+  color: white;
+}
 
-// .navigation {
-//   background-color: black;
-// }
+.kbd {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 90%;
+}
