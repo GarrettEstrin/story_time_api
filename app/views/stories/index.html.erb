@@ -25,7 +25,7 @@
 
 <kbd class="big-text">new stories</kbd>
 
-<% @stories.each do |s| %>
+<% @reversed_h.each do |s| %>
 <h3><%= link_to s.title, story_path(s.id) %></h3>
 <h4><%= s.content.split(/[\r\n]+/)[0] %></h4>
 <hr>
