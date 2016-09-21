@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:password])
       # log the user in
       session[:user_id] = @user.id
-      redirect_to stories_path
+      session[:return_to] ||= request.referer
+      redirect_to session.delete(:return_to)
     else
       redirect_to new_session_path
     end
