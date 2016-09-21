@@ -1,4 +1,9 @@
+<div class="col-md-9 right-border">
+
 <h1><%= @story.title %></h1>
+<p>
+   started by <%= @user.find(@story.user_id).name %>
+</p>
 
 
 <% @split_story.each do |para| %>
@@ -7,9 +12,14 @@
   </p>
 <% end %>
 <hr>
+</div>
 
+<div class="col-md-3">
 
-Comments:
+<h1>Comments:</h1>
+<br>
+<br>
+<br>
 <ul>
 <% @story.comments.each do |a| %>
 <li><%= a.responder %> |
@@ -17,22 +27,28 @@ Comments:
   <br>
 <% end %>
 </ul>
-
-<% if logged_in? %>
+</div>
+<div class="col-md-9">
+  <% if logged_in? %>
     <h3>Add to the story!</h3>
     <br>
     <%= form_for @story do |f| %>
-    <%= f.text_area :content, :class => 'form-size-medium', value: "", placeholder: "Add to the Story!" %>
-    <br>
-    <%= f.submit %>
+      <%= f.text_area :content, :class => 'form-size-medium', value: "", placeholder: "Add to the Story!" %>
+      <br>
+      <%= f.submit "Add to the story" %>
+      <% end %>
+  <% else %>
+    <h3>Log in to add to this story</h3>
   <% end %>
-  Add a comment:
+</div>
+<div class="col-md-3">
+  <% if logged_in? %>
+    Add a comment:
     <%= form_for [@story, @story.comments.build] do |f| %>
     <%= f.text_area :body %>
-    <%= f.submit %>
+    <br>
+    <%= f.submit 'Add a comment'%>
     <% end %>
-<% end %>
+  <% end %>
 
-<% if not logged_in? %>
-  <h3>Log in to add to this story</h3>
-<% end %>
+</div>

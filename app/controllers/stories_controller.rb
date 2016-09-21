@@ -7,6 +7,7 @@ class StoriesController < ApplicationController
   def show
     @story = Story.find(params[:id])
     @split_story = @story[:content].split(/[\r\n]+/)
+    @user = User.all
   end
 
   def new
