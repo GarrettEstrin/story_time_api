@@ -33,8 +33,15 @@ body {
  .form-size-medium {
     font-size: 18px;
     padding: 5px;
-    width: 600px;
+    width: 100%;
     height: 200px;
+ }
+
+ .form-size-small {
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+    height: 50px;
  }
 
 .nav_form {
