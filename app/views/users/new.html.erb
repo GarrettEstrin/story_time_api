@@ -1,9 +1,31 @@
+<br>
+<br>
+<br>
+<br>
+<div class="col-lg-4">
+
+</div>
+<div class="col-lg-4 text-center">
 
 <%= form_for @user do |f|%>
-Name: <%=  f.text_field :name %>
+<strong class="md-text">Name:
 <br>
-Email: <%= f.text_field :email %>
+</strong><%=  f.text_field :name, :class => 'form-size-small' %>
 <br>
-Password: <%= f.password_field :password %><br>
-<%= f.submit %>
+<strong class="md-text">Email:
+<br>
+</strong><%= f.text_field :email, :class => 'form-size-small' %>
+<br>
+<strong class="md-text">Password:
+  <br>
+</strong><%= f.password_field :password, :class => 'form-size-small' %>
+<br>
+<br>
+<%= f.submit :class => 'kbd md-text'%>
 <% end %>
+
+</div>
+
+<div class="col-lg-4">
+
+</div>

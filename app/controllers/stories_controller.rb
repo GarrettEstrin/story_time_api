@@ -1,6 +1,7 @@
 class StoriesController < ApplicationController
   def index
     @stories = Story.all
+    # @stories = @stories.sort
     @story_start = rand_story_starts
   end
 
