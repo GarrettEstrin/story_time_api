@@ -1,10 +1,10 @@
-<div class="col-md-12 navigation">
+<div class="col-xl-12 navigation">
 
 <% if not logged_in? %>
-<div class="col-md-7">
+<div class="col-xl-8 col-lg-6">
   <h1><kbd class='big'> <%= link_to "community story time", stories_path %> </kbd></h1>
 </div>
-<div class="col-md-5 nav_form">
+<div class="col-xl-4 col-lg-6 nav_form">
   <%= form_tag sessions_path do %>
   Login | Email: <%= text_field_tag :email %>
   Password: <%= password_field_tag :password, nil %>
@@ -14,13 +14,13 @@
   <%= link_to "Sign Up", new_user_path %>
 </div>
 <% else %>
-<div class="col-md-6">
+<div class="col-lg-6">
 <h1><kbd class='big'> <%= link_to "community story time", stories_path %> </kbd></h1>
 </div>
-<div class="col-md-4 nav_start">
+<div class="col-lg-4 nav_start">
   <button type="button" class="btn btn-default navbar-btn"><%= link_to "Start a story", new_story_path %></button>
 </div>
-<div class="col-md-2 nav_form">
+<div class="col-lg-2 nav_form">
   Hello <%= current_user.name %> |
   <%= link_to 'Log Out', logout_path %>
 </div>
