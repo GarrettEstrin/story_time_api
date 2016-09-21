@@ -18,6 +18,9 @@
 
   </div>
 </div>
+<br>
+<div class="col-lg-12">
+
 <% if logged_in? %>
 <% if current_user.name == 'admin' %>
 <%= params %>
@@ -25,5 +28,7 @@
 Current User: <%= current_user.id %>
 <% end %>
 <% end %>
+
+</div>
 </body>
 </html>

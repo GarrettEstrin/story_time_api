@@ -6,12 +6,27 @@
 </p>
 
 
-<% @split_story.each do |para| %>
+<% @story.content.split(/[\r\n]+/).each do |s| %>
   <p>
-    <%= para %>
+    <%= s %>
   </p>
-<% end %>
+  <% end %>
+  <!-- Test Section -->
+
+<!-- End Test section -->
 <hr>
+<br>
+<% if logged_in? %>
+  <h3>Add to the story!</h3>
+  <br>
+  <%= form_for @story do |f| %>
+    <%= f.text_area :content, :class => 'form-size-medium', value: "", placeholder: "Add to the Story!" %>
+    <br>
+    <%= f.submit "Add to the story", :class => 'kbd' %>
+    <% end %>
+<% else %>
+  <h3>Log in to add to this story</h3>
+<% end %>
 </div>
 
 <div class="col-md-3">
@@ -38,18 +53,7 @@
 <% end %>
 </div>
 <div class="col-md-9">
-  <% if logged_in? %>
-    <h3>Add to the story!</h3>
-    <br>
-    <%= form_for @story do |f| %>
-      <%= f.text_area :content, :class => 'form-size-medium', value: "", placeholder: "Add to the Story!" %>
-      <br>
-      <%= f.submit "Add to the story", :class => 'kbd' %>
-      <% end %>
-  <% else %>
-    <h3>Log in to add to this story</h3>
-  <% end %>
-</div>
+
 <div class="col-md-3">
 
 
