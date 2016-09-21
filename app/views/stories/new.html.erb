@@ -1,8 +1,24 @@
-<h1>Start a new Story!</h1>
+<h1 class="text-center">Start a new Story!</h1>
+<br>
+<br>
+<div class="col-lg-2">
+
+</div>
+<div class="col-lg-8">
+<p class='kbd inline md-text'>Story Title:</p>
+<br>
 <%= form_for @story do |f|%>
-Story Title: <%=  f.text_field :title %>
+<%=  f.text_field :title, placeholder: "Story title", :class => 'form-size-small' %>
 <br>
-Story Content: <%= f.text_area :content, :class => 'form-size-large' %>
 <br>
-<%= f.submit %>
+<p class='kbd inline md-text'>Story Content:</p>
+<br>
+<%= f.text_area :content, :class => 'form-size-large', placeholder: "Beginning to new adventures go here!" %>
+<br>
+<%= f.submit "Start Story", :class => 'kbd'%>
 <% end %>
+</div>
+
+<div class="col-lg-2">
+
+</div>

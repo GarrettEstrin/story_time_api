@@ -2,7 +2,7 @@
 
 <% if not logged_in? %>
 <div class="col-xl-8 col-lg-6">
-  <h1><kbd class='big'> <%= link_to "community story time ", stories_path %> </kbd></h1>
+  <h1><kbd class='big-text'> <%= link_to "community story time ", stories_path %> </kbd></h1>
 </div>
 <div class="col-xl-4 col-lg-6 nav_form">
   <%= form_tag sessions_path do %>
@@ -15,7 +15,7 @@
 </div>
 <% else %>
 <div class="col-lg-6">
-<h1><kbd class='big'> <%= link_to "community story time ", stories_path %> </kbd></h1>
+<h1><kbd class='big-text'> <%= link_to "community story time ", stories_path %> </kbd></h1>
 </div>
 <div class="col-lg-4 nav_start">
   <button type="button" class="btn btn-default navbar-btn"><%= link_to "Start a story", new_story_path %></button>
