@@ -1,8 +1,10 @@
 <div class="jumbotron">
-  <h1 class='custom_h1'>Let the Community Help Tell YOUR Story!</h1>
+  <h1 class='custom_h1'> <%= @story_starts[0 + rand(@story_starts.count)] %> </h1>
   <p></p>
   <p></p>
 </div>
+<div class="col-md-12">
+
 <kbd class="big">popular stories</kbd>
 
 <% @stories.each do |s| %>
@@ -10,3 +12,4 @@
 <h4><%= s.content.split(/[\r\n]+/)[0] %></h4>
 <hr>
 <% end %>
+</div>
