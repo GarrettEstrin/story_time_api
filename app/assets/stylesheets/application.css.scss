@@ -35,13 +35,13 @@
 
 .nav_form {
   height: 69px;
-  padding-top: 20px;
+  padding-top: 30px;
   padding-left: 60px;
 }
 
 .nav_start {
   height: 69px;
-  padding-top: 10px;
+  padding-top: 19px;
 }
 
 a:hover {
@@ -59,11 +59,11 @@ a:hover {
 
 }
 
-h1 a {
-  font-size: 45px;
-  color: white;
+.navigation a {
+  color: black;
 }
 
-// a:.site_title {
-//   color: white;
-// }
+h1 a {
+  font-size: 45px;
+  color: white !important;
+}
