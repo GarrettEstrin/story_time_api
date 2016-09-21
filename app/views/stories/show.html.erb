@@ -17,21 +17,21 @@
 <hr>
 <br>
 <% if logged_in? %>
-  <h3>Add to the story!</h3>
+  <h3>add to the story!</h3>
   <br>
   <%= form_for @story do |f| %>
-    <%= f.text_area :content, :class => 'form-size-medium', value: "", placeholder: "Add to the Story!" %>
+    <%= f.text_area :content, :class => 'form-size-medium', value: "", placeholder: "add to the story!" %>
     <br>
-    <%= f.submit "Add to the story", :class => 'kbd' %>
+    <%= f.submit "add to the story", :class => 'kbd' %>
     <% end %>
 <% else %>
-  <h3>Log in to add to this story</h3>
+  <h3>log in to add to this story</h3>
 <% end %>
 </div>
 
 <div class="col-md-3">
 
-<h1>Comments:</h1>
+<h1>comments:</h1>
 <br>
 <br>
 <ul>
@@ -43,12 +43,12 @@
 </ul>
 <% if logged_in? %>
 <hr>
-  <h3>Add a comment:</h3>
+  <h3>add a comment:</h3>
   <br>
   <%= form_for [@story, @story.comments.build] do |f| %>
   <%= f.text_area :body, :class => 'form-size-small' %>
   <br>
-  <%= f.submit 'Add a comment', :class => 'kbd'%>
+  <%= f.submit 'add a comment', :class => 'kbd'%>
   <% end %>
 <% end %>
 </div>
