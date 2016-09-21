@@ -13,7 +13,7 @@
 <div class="col-md-6">
 
 <kbd class="big-text">popular stories</kbd>
-
+<br>
 <% 5.times do |i| %>
 <h3><%= link_to @stories[i].title, story_path(@stories[i].id) %></h3>
 <h4><%= @stories[i].content.split(/[\r\n]+/)[0] %></h4>
