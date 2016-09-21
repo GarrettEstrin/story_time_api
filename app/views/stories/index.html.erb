@@ -17,7 +17,6 @@
 <% @stories.each do |s| %>
 <h3><%= link_to s.title, story_path(s.id) %></h3>
 <h4><%= s.content.split(/[\r\n]+/)[0] %></h4>
-<p><%= s.comments.count %></p>
 <hr>
 <% end %>
 </div>
