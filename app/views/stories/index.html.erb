@@ -2,7 +2,10 @@
   <h1 class='custom_h1' style="
     border: solid white 10px;
     text-align: center;
-    padding: 95px;"> <%= @story_starts[0 + rand(@story_starts.count)] %> </h1>
+    padding: 95px;">
+<%= @story_start[0] %><br>
+<i class='smaller_text'><%= @story_start[1] %></i>
+    <%#= @story_starts[0 + rand(@story_starts.count)] %> </h1>
   <p></p>
   <p></p>
 </div>
