@@ -67,3 +67,15 @@ h1 a {
   font-size: 45px;
   color: white !important;
 }
+
+.background {
+  background-image: url(http://d279m997dpfwgl.cloudfront.net/wp/2014/10/1023_campfire-COG-1000x547.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.custom_h1 h1 {
+  border: solid white 10px;
+}
