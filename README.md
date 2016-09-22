@@ -1,60 +1,113 @@
 # Community Store Time
 
-### Javascript-based, turn based strategy game, styled in a laid-back, relaxing way.
+### A rails based web app that allows people to collaborate on stories.
 
-A two player, semi-competitive strategy game where you attempt to drop four of your colored tokens in a line, either horizontally, vertically or diagonally.  
+At community story time, users can start stories, continue previously started stories and make comments on stories.  
 
-All visual and audio elements are designed and implemented to promote relaxation and reduce stress.  These include tropical images, soothing beach noises and slow animations.
+![Sample of application](./sample.png)
 
-![Sample of gameplay](./sample_image.png)
+## To use the app
 
-### Controls
+Visit [commnity story time ](https://frozen-earth-84082.herokuapp.com/ )to use the app as a user.
 
-Users control is entirely click based.  Each player will click the column they want to place their token in when it is their turn, as indicated in the message center.
+Visit [commnity_story_time github repository ](https://github.com/GarrettEstrin/story_time) to download the app to your local machine.
 
-## To Play
+This app was built with Ruby 2.3.1.
 
-Visit http://garrettestrin.github.io/connect_four/ to play, or download a .zip of this repo and open index.html in your browser.
+### Local installation instructions
+
+Download the repository to your preferred directory.
+
+ Start a Posgres local server.
+
+ From the terminal and in your installation directory run
+
+ `bundle install`
+
+ to install the dependent gems.
+
+ Create the database by running
+
+ `rake db:create`.
+
+ Create the database tables by running
+
+ `rake db:migrate`
+
+ from the terminal.
+
+ Create at least five stories from the rails console before launching the site or errors will occur.
+
+ In the terminal in your installation directory, run
+
+ `rails console`
+
+ to enter the rails console.
+
+ In the rails console, run
+
+ `Story.create({title: "Story Example", content:"This is the body of the story", user_id:1})`
+
+ five times to generate five sample stories with user_id of 1.  A bug exists that requires five or more stories to be in the database to generate the home page.
+
+ In the rails console, run
+
+ `User.create({name:"User", email:"mail@mail.com"})`
+
+ to create the first user that will be the owner of the example stories.
+
+ In the rails console, run
+
+ `exit`
+
+ to exit the rails console, then start the rails server by running
+
+ `rails server`
+
+ in the terminal.
+
+ User your web browser to go to
+
+ localhost:3000
+
+ to use the site.
 
 ### Development process
 
-Technologies used: HTML / CSS / Javascript + jQuery
+Technologies used: HTML / CSS + Bootstrap / Javascript + jQuery / Ruby + Ruby on Rails / Postgres
 
-Columns are set to listen for clicks, at which time, an evaluation will be run to decide what row the token should be placed.  After a token is placed, a function to see if a player has met requirements to win has been achieved yet.  If one has, the message center indicates the winner and welcomes players to play again.  A lifetime score board is styled to the right of the board to indicate how many games each player has won.
+The app was generated using ruby on rails.
 
-![Mockup of layout](./sample_image2.png)
+![Mockup of layout](./wireframe.png)
 
 ## User Stories
 
-As a user, I interact with the game with a visually pleasing and simple UI.
+As a user, I can register a new account with minimal information.
 
-As a user, I can pick up and play a simple game that is relaxing to play.
+As a user, I can login without leaving the home page.
+
+As a user, I can post the beginning to a story.
+
+As a user, I can browse the stories newest and by most popular.
+
+As a user, I can continue stories started by other users.
+
+As a user, I can logout out of the website from any page.
 
 ## Future implementations
 
-Make code DRY - implement new logic.
+* Search for stories by keyword.
+
+* Like system.
+
+* Fix errors related to having less than five stories in database.
+
+* Deployment Instructions in this README
 
 ## Feature Wish List
 
-* Really Bitchen token animations!
+* Story history's
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Edit stories
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Fork stories
