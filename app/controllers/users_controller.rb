@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
-  before_action :authorize, only: [:show, :edit]
+  # What does this do?
+  # before_action :authorize, only: [:show, :edit]
   def index
   end
 
   def show
+    @user = User.find(params[:id])
+    @story = Story.where(:user_id => @user.id)
   end
 
   def new

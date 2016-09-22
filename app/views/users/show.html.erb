@@ -1,2 +1,7 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1> <%= "#{@user.name}'s stories" %> </h1>
+
+<% @story.each do |s| %>
+  <h3><%= link_to s.title, story_path(s.id) %></h3>
+  <h4><%= s.content.split(/[\r\n]+/)[0] %></h4>
+  <hr>
+<% end %>
