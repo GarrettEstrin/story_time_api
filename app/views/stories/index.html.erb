@@ -22,8 +22,8 @@
   <% end %>
 <% else %>
 <% 5.times do |i| %>
-<h3><%= link_to @stories[i].title, story_path(@stories[i].id) %></h3>
-<h4><%= @stories[i].content.split(/[\r\n]+/)[0] %></h4>
+<h3><%= link_to @stories[i - 1].title, story_path(@stories[i - 1].id) %></h3>
+<h4><%= @stories[i - 1].content.split(/[\r\n]+/)[0] %></h4>
 <hr>
 <% end %>
 <% end %>
