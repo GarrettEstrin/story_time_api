@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     @user.email = @user.email
     @user.email = @user.email.downcase
     if @user.save
+      session[:user_id] = @user.id
       redirect_to stories_path
     else
       redirect_to new_user_path
