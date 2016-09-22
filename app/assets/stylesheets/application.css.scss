@@ -136,7 +136,7 @@ h3 a:hover {
 .kbd {
   background-color: black;
   color: white;
-  border: none;
+  border: solid white 3px;
   border-radius: 5px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 90%;
@@ -144,4 +144,8 @@ h3 a:hover {
 
 .inline {
   display: inline;
+}
+
+#start-story-btn a:link {
+  padding: 0;
 }

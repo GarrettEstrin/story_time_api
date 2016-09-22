@@ -5,10 +5,17 @@
     text-align: center;
     padding: 95px;">
 <%= @story_start[0] %><br>
-<i class='smaller_text'><%= @story_start[1] %></i></h1>
-  <p></p>
-  <p></p>
+<i class='smaller_text'><%= @story_start[1] %>
+<br>
+<br>
+<% if logged_in? %>
+<button type="button" id="start-story-btn" class="btn kbd md-text"><%= link_to "Start a story", new_story_path %></button>
+<% end %>
+</i>
+</h1>
+
 </div>
+
 <div class="col-md-6">
 
 <kbd class="big-text">popular stories</kbd>
