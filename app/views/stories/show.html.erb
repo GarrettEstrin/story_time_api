@@ -2,7 +2,8 @@
 
 <h1><%= @story.title %></h1>
 <p>
-   started by <%= @user.find(@story.user_id).name %>
+   started by 
+   <%= link_to @user.find(@story.user_id).name, user_path(@story.user_id) %>
 </p>
 
 
