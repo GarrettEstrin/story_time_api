@@ -10,15 +10,15 @@
 <%= form_for @user do |f|%>
 <strong class="md-text">name:
 <br>
-</strong><%=  f.text_field :name, :class => 'form-size-small' %>
+</strong><%=  f.text_field :name, :required => true, :class => 'form-size-small' %>
 <br>
 <strong class="md-text">email:</strong>
 <br>
-<%= f.text_field :email, :class => 'form-size-small' %>
+<%= f.text_field :email, :required => true, :class => 'form-size-small' %>
 <br>
 <strong class="md-text">password:
   <br>
-</strong><%= f.password_field :password, :class => 'form-size-small' %>
+</strong><%= f.password_field :password, :required => true, :class => 'form-size-small' %>
 <br>
 <br>
 <%= f.submit :class => 'kbd md-text'%>
