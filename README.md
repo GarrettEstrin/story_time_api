@@ -8,7 +8,7 @@ At community story time, users can start stories, continue previously started st
 
 ## To use the app
 
-Visit [commnity story time ](https://frozen-earth-84082.herokuapp.com/ )to use the app as a user.
+Visit [community story time ](https://frozen-earth-84082.herokuapp.com/ )to use the app as a user.
 
 Visit [commnity_story_time github repository ](https://github.com/GarrettEstrin/story_time) to download the app to your local machine.
 
@@ -68,7 +68,7 @@ Download the repository to your preferred directory.
 
  User your web browser to go to
 
- localhost:3000
+ [localhost:3000 ](localhost:3000)
 
  to use the site.
 
