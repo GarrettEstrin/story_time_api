@@ -8,15 +8,15 @@
 <div class="col-lg-4 text-center">
 
 <%= form_for @user do |f|%>
-<strong class="md-text">Name:
+<strong class="md-text">name:
 <br>
 </strong><%=  f.text_field :name, :class => 'form-size-small' %>
 <br>
-<strong class="md-text">Email:
+<strong class="md-text">email:</strong>
 <br>
-</strong><%= f.text_field :email, :class => 'form-size-small' %>
+<%= f.text_field :email, :class => 'form-size-small' %>
 <br>
-<strong class="md-text">Password:
+<strong class="md-text">password:
   <br>
 </strong><%= f.password_field :password, :class => 'form-size-small' %>
 <br>

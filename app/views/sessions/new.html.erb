@@ -1,11 +1,28 @@
-<div class="hidden_nav">
-<h1>Log In</h1>
-<hr>
+<br>
+<br>
+<br>
+<br>
+<div class="col-lg-4 col-md-2">
+
+</div>
+<div class="col-lg-4 col-md-8 text-center">
+<h6><kbd class='md-text'>oops.
+  <br>
+  please try your password again.</kbd></h6>
+<br>
 <%= form_tag sessions_path do %>
-Email: <%= text_field_tag :email %>
+<strong class="md-text">email:</strong>
 <br>
-Password: <%= password_field_tag :password, nil %>
+ <%= text_field :email, "", class: 'form-size-small' %>
 <br>
-<%= submit_tag "Log In" %>
+<strong class="md-text">password:</strong>
+<br>
+<%= password_field :password, "", class: 'form-size-small' %>
+<br>
+<br>
+<%= submit_tag "log in", :class => 'kbd md-text' %>
 <% end %>
+</div>
+<div class="col-lg-4 col-md-2">
+
 </div>
