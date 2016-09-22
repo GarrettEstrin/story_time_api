@@ -15,9 +15,9 @@
 
 <!-- End Test section -->
 <hr>
-<br>
 <% if logged_in? %>
   <h3>add to the story!</h3>
+  <h4>if you don't like the direction its going, <kbd class="text-white"><%= link_to "fork it!", "#{stories_new_fork_path}?id=#{@story.id}" %></kbd></h4>
   <br>
   <%= form_for @story do |f| %>
     <%= f.text_area :content, :class => 'form-size-medium', value: "", placeholder: "add to the story!" %>

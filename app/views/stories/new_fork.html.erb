@@ -1,0 +1,24 @@
+<h1 class="text-center">fork this story!</h1>
+<br>
+<br>
+<div class="col-lg-2">
+
+</div>
+<div class="col-lg-8">
+<p class='kbd inline md-text'>story title:</p>
+<br>
+<%= form_for @story do |f|%>
+<%=  f.text_field :title, :required => true, placeholder: "story title", :class => 'form-size-small' %>
+<br>
+<br>
+<p class='kbd inline md-text'>story content:</p>
+<br>
+<%= f.text_area :content, :required => true, :class => 'form-size-large', placeholder: "beginning to new adventures go here!" %>
+<br>
+<%= f.submit "start story", :class => 'kbd'%>
+<% end %>
+</div>
+
+<div class="col-lg-2">
+
+</div>

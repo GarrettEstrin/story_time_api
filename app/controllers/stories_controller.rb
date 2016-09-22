@@ -20,7 +20,7 @@ class StoriesController < ApplicationController
     @story = Story.new({title: params[:story][:title], content: params[:story][:content], user_id: current_user.id})
     if @story.save
       # redirect to new question
-      redirect_to stories_path
+      redirect_to story_path(@story)
     end
   end
 
@@ -32,6 +32,23 @@ class StoriesController < ApplicationController
     @story.content += "\r\n" + " " + params[:story][:content]
     @story.save
     redirect_to story_path
+  end
+
+  def new_fork
+    if params[:id]
+      @original_story = Story.find(params[:id])
+      @story = Story.new({content: @original_story.content})
+    else
+    @story = Story.new
+    end
+  end
+
+  def create_new_fork
+    @story = Story.new({title: params[:story][:title], content: params[:story][:content], user_id: current_user.id})
+    if @story.save
+      # redirect to new question
+      redirect_to story_path(@story)
+    end
   end
 
   def destroy
