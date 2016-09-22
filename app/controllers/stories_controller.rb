@@ -1,7 +1,7 @@
 class StoriesController < ApplicationController
   def index
     @stories = Story.all.sort_by{|s| s.comments.count}.reverse
-    @reversed_h = @stories.reverse
+    @reversed_h = @stories.sort_by{|s| s.updated_at}.reverse
     # @stories = @stories.sort
     @story_start = rand_story_starts
   end
