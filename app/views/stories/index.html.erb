@@ -24,12 +24,18 @@
   <% @stories.each do |s| %>
   <h3><%= link_to @stories.title, story_path(@stories.id) %></h3>
   <h4><%= @stories.content.split(/[\r\n]+/)[0] %></h4>
+  <p>
+    comments: <%= s.comments.count %>
+  </p>
   <hr>
   <% end %>
 <% else %>
 <% 5.times do |i| %>
 <h3><%= link_to @stories[i].title, story_path(@stories[i].id) %></h3>
 <h4><%= @stories[i].content.split(/[\r\n]+/)[0] %></h4>
+<p>
+  comments: <%= @stories[i].comments.count %>
+</p>
 <hr>
 <% end %>
 <% end %>
