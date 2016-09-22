@@ -68,9 +68,9 @@ Download the repository to your preferred directory.
 
  User your web browser to go to
 
- [localhost:3000 ](http:\\localhost:3000)
+ [localhost:3000 ](localhost:3000)
 
- to use the site.
+ to use the site locally.
 
 ### Development process
 
