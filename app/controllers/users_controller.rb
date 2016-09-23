@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @story = Story.where(:user_id => @user.id)
+    @users = User.all
   end
 
   def new
