@@ -20,6 +20,10 @@
   <br>
 </strong><%= f.password_field :password, :required => true, :class => 'form-size-small' %>
 <br>
+<strong class="md-text">confirm password:
+  <br>
+</strong><%= f.password_field :password_confirmation, :required => true, :class => 'form-size-small' %>
+<br>
 <br>
 <%= f.submit :class => 'kbd md-text'%>
 <% end %>
