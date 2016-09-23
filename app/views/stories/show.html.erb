@@ -2,8 +2,8 @@
 
 <h1><%= @story.title %></h1>
 <p>
-   started by 
-   <%= link_to @user.find(@story.user_id).name, user_path(@story.user_id) %>
+   started by
+   <%= link_to @user.find(@story.user_id).name, user_path(@story.user_id) %> | score: <%= @user.find(@story.user_id).stories.count %> 
 </p>
 
 
