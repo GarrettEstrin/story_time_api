@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    # make email downcase in database
     @user.email = @user.email
     @user.email = @user.email.downcase
     if @user.save

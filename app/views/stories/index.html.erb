@@ -9,7 +9,7 @@
 <br>
 <br>
 <% if logged_in? %>
-<button type="button" id="start-story-btn" class="btn kbd md-text"><%= link_to "Start a story", new_story_path %></button>
+<button type="button" id="start-story-btn" class="btn kbd md-text"><%= link_to "start a story", new_story_path %></button>
 <% end %>
 </i>
 </h1>
@@ -22,20 +22,16 @@
 <br>
 <% if @stories.count < 5 %>
   <% @stories.each do |s| %>
-  <h3><%= link_to @stories.title, story_path(@stories.id) %></h3>
-  <h4><%= @stories.content.split(/[\r\n]+/)[0] %></h4>
-  <p>
-    comments: <%= s.comments.count %>
-  </p>
+  <h3><%= link_to s.title, story_path(s.id) %></h3>
+  <h4><%= s.content.split(/[\r\n]+/)[0] %></h4>
+  <p>comments: <%= s.comments.count %></p>
   <hr>
   <% end %>
 <% else %>
 <% 5.times do |i| %>
 <h3><%= link_to @stories[i].title, story_path(@stories[i].id) %></h3>
 <h4><%= @stories[i].content.split(/[\r\n]+/)[0] %></h4>
-<p>
-  comments: <%= @stories[i].comments.count %>
-</p>
+<p>comments: <%= @stories[i].comments.count %></p>
 <hr>
 <% end %>
 <% end %>
@@ -51,6 +47,7 @@
   <% @reversed_h.each do |s| %>
   <h3><%= link_to s.title, story_path(s.id) %></h3>
   <h4><%= s.content.split(/[\r\n]+/)[0] %></h4>
+  <p> <%= s.created_at.strftime("%b %d %Y") %></p>
   <hr>
   <% end %>
 
@@ -59,6 +56,7 @@
 <% 5.times do |i| %>
   <h3><%= link_to @reversed_h[i].title, story_path(@reversed_h[i].id) %></h3>
   <h4><%= @reversed_h[i].content.split(/[\r\n]+/)[0] %></h4>
+  <p> <%= @reversed_h[i].created_at.strftime("%b %d %Y") %></p>
   <hr>
   <% end %>
 

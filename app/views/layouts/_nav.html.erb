@@ -1,5 +1,5 @@
 <div class="col-xl-12 navigation">
-
+<!-- what the user sees if they are NOT logged in -->
 <% if not logged_in? %>
 <div class="col-xl-8 col-lg-6">
   <h1><kbd class='big-text'> <%= link_to "community story time ", stories_path %> </kbd></h1>
@@ -13,6 +13,7 @@
   or
   <kbd class="text-white"><%= link_to "sign up", new_user_path %></kbd>
 </div>
+<!-- What the user sees when they are logged in -->
 <% else %>
 <div class="col-lg-6">
 <h1><kbd class='big-text'> <%= link_to "community story time ", stories_path %> </kbd></h1>

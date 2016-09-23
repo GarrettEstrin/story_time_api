@@ -23,6 +23,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+// form helper classes
  .form-size-large {
     font-size: 18px;
     padding: 5px;
@@ -44,6 +46,7 @@ body {
     height: 50px;
  }
 
+// navigation helper classes
 .nav_form {
   height: 69px;
   padding-top: 30px;
@@ -55,35 +58,9 @@ body {
   padding-top: 19px;
 }
 
+// remove link styling
 a:hover {
   text-decoration: none;
-}
-
-// Make text large
-
-.big-text {
-  font-size: 50px !important;
-}
-
-.md-text {
-  font-size: 35px !important;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.navigation a {
-  color: black;
-
 }
 
 h1 a {
@@ -99,6 +76,47 @@ h3 a:hover {
   color: #275035;
 }
 
+.navigation a {
+  color: black;
+}
+
+.text-white a {
+  color: white;
+}
+
+#start-story-btn a:link {
+  padding: 0;
+}
+
+// Text size helper classes
+
+.big-text {
+  font-size: 50px !important;
+}
+
+.md-text {
+  font-size: 35px !important;
+}
+
+.smaller_text {
+  font-size: 20px;
+}
+
+// Text alignment helper classes
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+// jumbotron background and styling
 .background {
   background-image: url(https://d279m997dpfwgl.cloudfront.net/wp/2014/10/1023_campfire-COG-1000x547.jpg);
   background-repeat: no-repeat;
@@ -112,10 +130,7 @@ h3 a:hover {
   border: solid white 10px;
 }
 
-.smaller_text {
-  font-size: 20px;
-}
-
+// Border helper classes
 .left-border {
   border-left: solid lightgrey 5px;
 }
@@ -124,10 +139,7 @@ h3 a:hover {
   border-right: solid lightgrey 2px;
 }
 
-.text-white a {
-  color: white;
-}
-
+// Very specific styles
 .kbd {
   background-color: black;
   color: white;
@@ -139,8 +151,4 @@ h3 a:hover {
 
 .inline {
   display: inline;
-}
-
-#start-story-btn a:link {
-  padding: 0;
 }

@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   def new
   end
 
+  # Create a new session
   def create
     @user = User.find_by_email(params[:email].downcase)
     if @user && @user.authenticate(params[:password])
@@ -14,6 +15,7 @@ class SessionsController < ApplicationController
     end
   end
 
+  # destroy new session
   def destroy
     session[:user_id] = nil
     redirect_to stories_path
