@@ -108,6 +108,4 @@ As a user, I can logout out of the website from any page.
 
 * Story history's
 
-* Edit stories
-
-* Fork stories
+* Edit stories by clicking on desired paragraph
