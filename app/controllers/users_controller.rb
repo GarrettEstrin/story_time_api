@@ -5,9 +5,14 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @story = Story.where(:user_id => @user.id)
-    @users = User.all
+    # if user doesn't exist redirect_to root
+    if User.exists?(params[:id])
+      @user = User.find(params[:id])
+      @story = Story.where(:user_id => @user.id)
+      @users = User.all
+    else
+      redirect_to root_path
+    end
   end
 
   def new

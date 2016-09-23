@@ -9,10 +9,15 @@ class StoriesController < ApplicationController
   end
 
   def show
-    @story = Story.find(params[:id])
-    # split the story by carriage return
-    @split_story = @story[:content].split('/[\r\n]+/')
-    @user = User.all
+    # if no story exists, redirect_to home
+    if Story.exit?(params[:id])
+      @story = Story.find(params[:id])
+      # split the story by carriage return
+      @split_story = @story[:content].split('/[\r\n]+/')
+      @user = User.all
+    else
+      redirect_to root_path
+    end
   end
 
   def new

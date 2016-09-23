@@ -16,6 +16,9 @@ end
 get '/logout' => 'sessions#destroy'
 resources :sessions, only: [:new, :create]
 
+get '*path' => redirect('/')
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
