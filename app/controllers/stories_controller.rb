@@ -15,6 +15,7 @@ class StoriesController < ApplicationController
       # split the story by carriage return
       @split_story = @story[:content].split('/[\r\n]+/')
       @user = User.all
+      @comments = Comment.where(responder: @user.name)
     else
       redirect_to root_path
     end

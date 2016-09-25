@@ -8,8 +8,10 @@ class UsersController < ApplicationController
     # if user doesn't exist redirect_to root
     if User.exists?(params[:id])
       @user = User.find(params[:id])
-      @story = Story.where(:user_id => @user.id)
+      @story = Story.where(user_id: @user.id)
       @users = User.all
+      @stories = Story.all
+      @comments = Comment.where(responder: @user.name)
     else
       redirect_to root_path
     end
