@@ -1,4 +1,4 @@
-# Community Store Time
+# Community Story Time
 
 ### A rails based web app that allows people to collaborate on stories.
 
