@@ -55,10 +55,14 @@
 
 <% 5.times do |i| %>
   <h3><%= link_to @reversed_h[i].title, story_path(@reversed_h[i].id) %></h3>
-  <h4><%= @reversed_h[i].content.split(/[\r\n]+/)[0] %></h4>
+  <% if @reversed_h[i].content%>
+    <h4><%= @reversed_h[i].content.split(/[\r\n]+/)[0] %></h4>
+  <% else %>
+    <h4><%= @reversed_h[i].content %></h4>
+  <% end %>
   <p> <%= @reversed_h[i].created_at.strftime("%b %d %Y") %></p>
   <hr>
-  <% end %>
+<% end %>
 
 <% end %>
 </div>
